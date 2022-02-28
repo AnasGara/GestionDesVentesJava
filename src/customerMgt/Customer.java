@@ -22,7 +22,7 @@ public class Customer {
     @EqualsAndHashCode.Include
     String nom,prenom, mail,adresse;
     long phone;
-    CustomerType type;
+    CustomerType type= CustomerType.normal;
     Set<Command> listDescommandes= new HashSet<>();
 
 
@@ -51,7 +51,7 @@ public class Customer {
         this.phone = phone;
         this.type = type;
     }
-    
+
 
     public CustomerType getType() {
         return type;
